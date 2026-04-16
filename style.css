@@ -1,14 +1,15 @@
+header{
+    display: block;
+}
 header>img{
-    width: 40%;
-    display: flex;
-    justify-content: center;
-    margin: 2.5rem 7rem 2rem 7rem;
+    width: 35%;
+    margin: 1.5rem 9.75rem 1rem 9.75rem;
+    
 }
 nav a{
     color: white;
     text-decoration: none;
     font-size: 1rem;
-    margin: ;
     text-align: center;
     padding: 22px;
 }
@@ -28,7 +29,60 @@ body{
 h1{
     color: black;
     font-family: Shrikhand, cursive;
-    font-size: 8rem;
-    -webkit-text-stroke: 1px white;
-    margin: 0.5rem 10px;
+    font-size: 6.75rem;
+    -webkit-text-stroke: 1px rgb(51, 0, 255);
+    margin: 2rem 10px 8rem;
+    text-align: center;
+    line-height:8rem ;
+    text-shadow: 0px 0px 30px #2f00ff;
+    
 }
+.about{
+    margin: 0 1rem 0 1rem;
+}
+.myart{
+    font-size: 5.5rem;
+    margin-bottom: 0rem;
+}
+section>img{
+    max-width: 90%;
+    margin: 1rem 0.5rem 4.5rem 1.25rem;
+}
+.contact>div{
+    background-color: #0400ff;
+    padding: 0.5rem 0 0.5rem 1rem;
+}
+@media (min-width: 500px) {
+    header>img{
+        margin: 1rem 0 1rem 1rem;
+        width: 10%
+    }
+    nav{
+        display: flex;
+        justify-content: flex-end;
+        position:absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+    h1{
+        font-size: 10rem;
+    }
+    .myart{
+        font-size: 10rem;
+        padding-bottom: 4rem;
+    }
+    section>img{
+        max-width: 40%;
+        padding: 1rem;
+       
+    }
+    .pieces{
+        margin-left: 8rem;
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+       max-height: 10rem;
+
+    }
+}
+
