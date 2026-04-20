@@ -1,24 +1,31 @@
 header{
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
 }
 header>img{
     width: 35%;
-    margin: 1.5rem 9.75rem 1rem 10rem;
+   
 }
 nav a{
     color: white;
     text-decoration: none;
     font-size: 1rem;
-    text-align: center;
+    display: inline-block;
     padding: 22px;
+    
 }
 nav{
-    display: flex;
-    justify-content: center;
+   flex-basis: 100%;
+   text-align: center;
+  
 }
 nav a:hover{
     color: #0400ff;
     text-decoration: none;
+    
 }
 body{
     background-color: black;
@@ -26,45 +33,56 @@ body{
     font-family: lexend deca, sans-serif;
     margin: 0 0 0 0;
 }
-h1{
-    color: black;
+h1{    color: black;
     font-family: Shrikhand, cursive;
-    font-size: 6.75rem;
     -webkit-text-stroke: 1px rgb(51, 0, 255);
-    margin: 2rem 10px 6rem;
     text-align: center;
-    line-height:8rem ;
+    line-height:5rem ;
     text-shadow: 0px 0px 30px #2f00ff;
-    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+.title{ 
+    font-size: 3.5rem;
+}
+.circle>img{
+    position: absolute;
+    border-radius: 35%;
+    width: 8rem;
+    z-index: 1;
+    right: 8px;
+}
+.skills{
+    position: relative;
+    z-index: 2;
 }
 .education{
     position: relative;
     z-index: 2;
 }
-.circle{
-    background-color: blue;
-    border-radius: 50%;
-    width: 275px;
-    height: 275px;
-    position: absolute;
-    top: 90%;
-    left: 40%;
-    z-index: 1;
-    opacity: 0.75;
-}
+
 .about{
     margin: 0 1rem 0 1rem;
+    position:relative;
+    z-index: 2;
 }
 .myart{
     font-size: 5.5rem;
     margin-bottom: 0rem;
 }
+.pieces{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .pieces>img{
     max-width: 25rem;
-    margin: 1rem 0.5rem 4.5rem 3.25rem;
+    margin: 1rem 0.5rem 2rem 1rem;
 }
 .contact{
-    font-size: 5rem;
+    font-size: 4rem;
     margin-bottom: 1rem;
 }
 form{
@@ -75,14 +93,32 @@ form{
 }
 footer{
     background-color: #0400ff;
-    font-family: lexend deca, sans-serif;
-    color: white;
-    margin: 0 0 0 0;
-    padding: 1rem 0 4rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+    
 }
-footer h3{
+footer p{
     font-size: 1rem;
-    text-align: center; 
+}
+footer .socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px 0;
+}
+footer .socials a{
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 2rem;
+}
+footer nav a{
+    font-size: 12px;
+}
+footer nav a:hover{
+    color: black;
 }
 label{
     margin: 0 0 0 0;
@@ -103,4 +139,99 @@ textarea{
     border-radius: 15px;
     margin:0 0 0 0;
 }
-
+@media(min-width: 540px){
+    header{
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        margin: 1rem 0 0 1rem;
+        flex-direction: row;
+    }
+    header>img{
+        max-width: 15%;
+    }
+    nav{
+        text-align: right;
+    }
+    .circle>img{
+        width: 12rem;
+    }
+    .pieces{
+    display: flex;
+    flex-flow: column wrap;
+    max-height: 105rem;
+    align-content: center;
+    }
+    .pieces>img{
+        width: 40%;
+        margin: 0.5rem
+    }
+    .title{
+        font-size: 4rem;
+    }
+    h1{
+        line-height: 7rem;
+    }
+    .myart{
+        font-size: 7rem;
+    }
+    .contact{
+        font-size: 6rem;
+    }
+}
+@media(max-width: 440px){
+    .pieces>img{
+        width: 80%;
+        margin: 0.5rem
+    }
+    nav a{
+        font-size: 10px;
+    }
+    footer nav a{
+        font-size: 10px;
+    }
+    .title{
+        font-size: 2.75rem;
+        line-height: 1rem;
+    }
+    .myart{
+        font-size: 3rem;
+        margin-top: 1px;
+    }
+    .contact{
+        font-size: 3rem;
+        margin-top: 1px;
+    }
+}
+@media(max-width: 300px){
+    nav a{
+        font-size: 8px;
+        padding: 15px;
+    }
+    h1{
+        line-height: 3rem;
+    }
+    .title{
+        font-size: 2rem;
+    }
+    .circle>img{
+        width: 5rem;
+    }
+    footer .social{
+        padding: 8px;
+    }
+    footer .socials a{
+        font-size: 1rem;
+    }
+    .about{
+        font-size: 0.5rem;
+    }
+}
+@media(min-width: 1000px){
+    .circle>img{
+        position: absolute;
+        right: 10rem;
+        bottom: 0.75rem;
+        width: 15rem;
+    }
+}
